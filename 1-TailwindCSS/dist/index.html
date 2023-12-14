@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PING Comming Soon</title>
+  <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/54b8bf2d08.js" crossorigin="anonymous"></script>
+  <!--JS Email Validation-->
+  <!-- <script>
+    function myFunction() {
+      var x = document.getElementById("myEmail").pattern;
+      }
+    </script> -->
+</head>
+<body class="grid place-content-center h-screen">
+ <div class="w-full h-auto">
+    <h1 class="text-center text-black font-bold text-2xl">PING<span class="text-blue-600 rounded-none">.</span></h1>
+    <h2 class="text-center text-gray-400 text-3xl mt-3">We are launching <span class="text-black font-semibold"> soon!</span></h2>
+    <p class="text-center text-gray-600 text-sm mt-2">Subscribe and get notified<p>
+
+    <!-- Start Email Field flex-wrap md:flex-nowrap-->
+    <!--action="/action_page.php"-->
+    <div class="flex flex-row items-center justify-center">
+    <form name="FormName" class="w-full max-w-sm">
+        <div class="flex flex-col md:flex-row py-2 mb-5">
+          <input class="appearance-none bg-transparent mb-4 border border-blue-200 rounded-3xl md:rounded-3xl w-96 h-9 text-gray-700 mr-15 py-1 px-2 leading-tight focus:outline-none" type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your Email Address" aria-label="Full name">
+          <button class="bg-blue-500 hover:bg-blue-400 border-blue-500 text-sm text-white w-96 h-9 md:w-40 md:ml-3 py-1 px-2 rounded-full" type="submit">
+            Notify Me
+          </button>
+        </div>
+        <p id="error" class="hidden text-red-600">Please provide a valid email address</p>
+    </form>
+    </div>
+    <!--End Email Field-->
+    <!--Start Image Design-->
+    <div class="mt-4">
+      <div class="md:flex max-w-sm mx-auto bg-white rounded-xl overflow-hidden md:max-w-sm sm:max-w-sm">
+       <div>
+           <img class="h-90" src="illustration-dashboard.png" srcset="">
+       </div>
+      </div>
+    </div>
+    <!--End Image Design-->
+
+    <!--Start Social Icons-->
+    <div class="flex justify-center text-center space-x-8 mt-12">
+      <div><i class="fa-brands fa-facebook-f text-blue-600 hover:text-white hover:bg-blue-600 rounded-2xl p-1"></i></div>
+      <div><i class="fa-brands fa-twitter text-blue-600 hover:text-white hover:bg-blue-600 rounded-2xl p-1"></i></div>
+      <div><i class="fa-brands fa-instagram text-blue-600 hover:text-white hover:bg-blue-600 rounded-2xl p-1"></i></div>
+    </div>
+    <!--End Social Icons-->
+    <div class="text-center text-sm text-gray-400 mt-4 mb-4">@Copyright Ping. All rights reserved.</div>
+ </div>
+ 
+<script>
+  document
+    .getElementById("FormName")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const emailInput = document.getElementById("myEmail");
+      const errorText = document.getElementById("error");
+
+      if (emailInput.value === "") {
+        errorText.classList.remove("hidden");
+      } else {
+        errorText.classList.add("hidden");
+      }
+    });
+
+  document
+    .getElementById("myForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const emailInput = document.getElementById("myEmail");
+      const errorText = document.getElementById("error");
+      const emailRegex = /^\S+@\S+\.\S+$/;
+
+      if (!emailRegex.test(emailInput.value)) {
+        errorText.classList.remove("hidden");
+      } else {
+        errorText.classList.add("hidden");
+      }
+    });
+</script>
+</body>
+</html> 
